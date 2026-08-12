@@ -1,0 +1,153 @@
+{
+  "conversation": {
+    "kind": "group",
+    "id": "QQ-Group:dice-lua-review",
+    "name": "Lua 兼容层审阅群",
+    "memberCount": 3
+  },
+  "messages": [
+    {
+      "direction": "in",
+      "nickname": "骰主",
+      "qq": "3909311212",
+      "rawApi": "ExecuteNew",
+      "role": "member",
+      "scope": "private",
+      "segments": null,
+      "sequence": 1,
+      "text": ".luaplug add scenario-trail\n-- Original single-message scenario fixture.\nmsg_order = {}\nfunction trail(msg)\n  local data = getSelfData(\"trail\")\n  data.count = (data.count or 0) + 1\n  setGroupConf(msg.gid, \"trail-count\", data.count)\n  return \"trail-state:\" .. data.count .. \":\" .. getGroupConf(msg.gid, \"trail-count\", 0)\nend\nmsg_order[\".trail\"] = \"trail\"\nmsg_reply = { ping = { keyword = { Match = \"trail ping\" }, echo = \"trail-pong\" } }",
+      "timestamp": "2026-08-10T00:00:00.000Z",
+      "transcriptSequence": 1
+    },
+    {
+      "direction": "out",
+      "inReplyToSequence": 1,
+      "nickname": "TestBot",
+      "qq": "100000",
+      "rawApi": "SendToPerson",
+      "scope": "private",
+      "sequence": 7,
+      "text": "操作完成：add scenario-trail。",
+      "timestamp": "2026-08-10T00:00:00.001Z",
+      "transcriptSequence": 2
+    },
+    {
+      "direction": "in",
+      "nickname": "审阅者",
+      "qq": "3909311213",
+      "rawApi": "ExecuteNew",
+      "role": "member",
+      "scope": "group",
+      "segments": null,
+      "sequence": 2,
+      "text": ".trail",
+      "timestamp": "2026-08-10T00:00:01.000Z",
+      "transcriptSequence": 3
+    },
+    {
+      "direction": "out",
+      "inReplyToSequence": 2,
+      "nickname": "TestBot",
+      "qq": "100000",
+      "rawApi": "SendToGroup",
+      "scope": "group",
+      "sequence": 8,
+      "text": "trail-state:1:1",
+      "timestamp": "2026-08-10T00:00:01.001Z",
+      "transcriptSequence": 4
+    },
+    {
+      "direction": "in",
+      "nickname": "审阅者",
+      "qq": "3909311213",
+      "rawApi": "ExecuteNew",
+      "role": "member",
+      "scope": "group",
+      "segments": null,
+      "sequence": 3,
+      "text": ".trail",
+      "timestamp": "2026-08-10T00:00:02.000Z",
+      "transcriptSequence": 5
+    },
+    {
+      "direction": "out",
+      "inReplyToSequence": 3,
+      "nickname": "TestBot",
+      "qq": "100000",
+      "rawApi": "SendToGroup",
+      "scope": "group",
+      "sequence": 9,
+      "text": "trail-state:2:2",
+      "timestamp": "2026-08-10T00:00:02.001Z",
+      "transcriptSequence": 6
+    },
+    {
+      "direction": "in",
+      "nickname": "审阅者",
+      "qq": "3909311213",
+      "rawApi": "ExecuteNew",
+      "role": "member",
+      "scope": "group",
+      "segments": null,
+      "sequence": 4,
+      "text": "TRAIL PING",
+      "timestamp": "2026-08-10T00:00:03.000Z",
+      "transcriptSequence": 7
+    },
+    {
+      "direction": "out",
+      "inReplyToSequence": 4,
+      "nickname": "TestBot",
+      "qq": "100000",
+      "rawApi": "SendToGroup",
+      "scope": "group",
+      "sequence": 10,
+      "text": "trail-pong",
+      "timestamp": "2026-08-10T00:00:03.001Z",
+      "transcriptSequence": 8
+    },
+    {
+      "direction": "in",
+      "nickname": "骰主",
+      "qq": "3909311212",
+      "rawApi": "ExecuteNew",
+      "role": "member",
+      "scope": "private",
+      "segments": null,
+      "sequence": 5,
+      "text": ".luaplug disable scenario-trail",
+      "timestamp": "2026-08-10T00:00:04.000Z",
+      "transcriptSequence": 9
+    },
+    {
+      "direction": "out",
+      "inReplyToSequence": 5,
+      "nickname": "TestBot",
+      "qq": "100000",
+      "rawApi": "SendToPerson",
+      "scope": "private",
+      "sequence": 11,
+      "text": "操作完成：disable scenario-trail。",
+      "timestamp": "2026-08-10T00:00:04.001Z",
+      "transcriptSequence": 10
+    },
+    {
+      "direction": "in",
+      "nickname": "审阅者",
+      "qq": "3909311213",
+      "rawApi": "ExecuteNew",
+      "role": "member",
+      "scope": "group",
+      "segments": null,
+      "sequence": 6,
+      "text": ".trail",
+      "timestamp": "2026-08-10T00:00:05.000Z",
+      "transcriptSequence": 11
+    }
+  ],
+  "network": {
+    "failClosed": true,
+    "requests": null
+  },
+  "title": "骰主私聊导入小型 Lua 并在群内连续运行"
+}

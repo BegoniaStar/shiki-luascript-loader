@@ -1,0 +1,28 @@
+{
+  "conversation": {
+    "kind": "group",
+    "id": "QQ-Group:sealwrapper",
+    "name": "sealwrapper",
+    "memberCount": 0
+  },
+  "messages": [
+    {
+      "direction": "in",
+      "nickname": "Alice",
+      "qq": "3909311212",
+      "rawApi": "ExecuteNew",
+      "role": "",
+      "scope": "group",
+      "segments": null,
+      "sequence": 1,
+      "text": "hello",
+      "timestamp": "2026-08-01T00:00:00.000Z",
+      "transcriptSequence": 1
+    }
+  ],
+  "network": {
+    "failClosed": true,
+    "requests": null
+  },
+  "title": "空插件索引可安全加载"
+}

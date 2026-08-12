@@ -1,0 +1,14 @@
+This project is licensed under AGPL-3.0-only. See LICENSE.
+
+src/vendor/fengari is derived from Fengari 0.1.5 and is used under its MIT
+license:
+
+Copyright © 2017-2019 Benoit Giannangeli
+Copyright © 2017-2025 Daurnimator
+Copyright © 1994-2017 Lua.org, PUC-Rio.
+
+The vendored copy removes Node-only library loading paths for SealDice/Goja.
+The original MIT license is retained in src/vendor/fengari/LICENSE.
+
+The vendored sprintf-js source is used under its BSD-3-Clause license; the
+license text is retained in src/vendor/sprintf-js/LICENSE.

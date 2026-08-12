@@ -1,0 +1,94 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BegoniaStar/sealwrapper/main/schemas/seal.scenario.schema.json",
+  "release": true,
+  "title": "骰主私聊导入小型 Lua 并在群内连续运行",
+  "tags": ["lua", "runtime-import", "management"],
+  "clock": "2026-08-10T00:00:00Z",
+  "host": {
+    "diceMasters": ["3909311212"]
+  },
+  "conversation": {
+    "kind": "group",
+    "id": "QQ-Group:dice-lua-review",
+    "name": "Lua 兼容层审阅群",
+    "memberCount": 3
+  },
+  "messages": [
+    {
+      "sequence": 1,
+      "qq": "3909311212",
+      "nickname": "骰主",
+      "role": "member",
+      "scope": "private",
+      "text": ".luaplug add scenario-trail\n-- Original single-message scenario fixture.\nmsg_order = {}\nfunction trail(msg)\n  local data = getSelfData(\"trail\")\n  data.count = (data.count or 0) + 1\n  setGroupConf(msg.gid, \"trail-count\", data.count)\n  return \"trail-state:\" .. data.count .. \":\" .. getGroupConf(msg.gid, \"trail-count\", 0)\nend\nmsg_order[\".trail\"] = \"trail\"\nmsg_reply = { ping = { keyword = { Match = \"trail ping\" }, echo = \"trail-pong\" } }"
+    },
+    {
+      "sequence": 2,
+      "qq": "3909311213",
+      "nickname": "审阅者",
+      "role": "member",
+      "scope": "group",
+      "text": ".trail"
+    },
+    {
+      "sequence": 3,
+      "qq": "3909311213",
+      "nickname": "审阅者",
+      "role": "member",
+      "scope": "group",
+      "text": ".trail"
+    },
+    {
+      "sequence": 4,
+      "qq": "3909311213",
+      "nickname": "审阅者",
+      "role": "member",
+      "scope": "group",
+      "text": "TRAIL PING"
+    },
+    {
+      "sequence": 5,
+      "qq": "3909311212",
+      "nickname": "骰主",
+      "role": "member",
+      "scope": "private",
+      "text": ".luaplug disable scenario-trail"
+    },
+    {
+      "sequence": 6,
+      "qq": "3909311213",
+      "nickname": "审阅者",
+      "role": "member",
+      "scope": "group",
+      "text": ".trail"
+    }
+  ],
+  "expect": {
+    "outputs": [
+      {
+        "inReplyToSequence": 1,
+        "text": "操作完成：add scenario-trail。"
+      },
+      {
+        "inReplyToSequence": 2,
+        "text": "trail-state:1:1"
+      },
+      {
+        "inReplyToSequence": 3,
+        "text": "trail-state:2:2"
+      },
+      {
+        "inReplyToSequence": 4,
+        "text": "trail-pong"
+      },
+      {
+        "inReplyToSequence": 5,
+        "text": "操作完成：disable scenario-trail。"
+      }
+    ],
+    "cooldown": {
+      "inputSequence": 6,
+      "outputs": 0
+    }
+  }
+}

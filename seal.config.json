@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "package": {
+    "name": "SealDice Dice Lua Compatibility",
+    "version": "0.1.0",
+    "authors": ["BegoniaHe","星·麒"],
+    "license": "AGPL-3.0-only",
+    "description": "在 SealDice 1.6.0 中加载受控的 Dice! Lua 插件。",
+    "homepage": ""
+  },
+  "build": {
+    "entry": "src/index.ts",
+    "ecmaTarget": "es6",
+    "bundleFileName": "dice-lua-compat.js"
+  },
+  "sealDice": {
+    "buildTarget": ["1.6.0"],
+    "defaultTarget": "1.6.0"
+  },
+  "release": {
+    "directory": "release",
+    "checksum": "sha256",
+    "artifactPolicy": {
+      "forbiddenPaths": [],
+      "forbiddenExtensions": [".map"]
+    }
+  },
+  "sealpack": {
+    "packageId": "BegoniaStar/sealdice-dice-lua-compat",
+    "minSealDice": "1.6.0",
+    "contents": {
+      "scripts": {
+        "bundle": true,
+        "path": "scripts/dice-lua-compat.js"
+      }
+    },
+    "dependencies": {},
+    "permissions": {
+      "network": false,
+      "networkHosts": [],
+      "acknowledgeUnrestrictedNetwork": false,
+      "fileRead": [],
+      "fileWrite": [],
+      "dangerous": false,
+      "httpServer": false,
+      "ipc": []
+    },
+    "readme": "README.md",
+    "assets": [
+      "assets/dice-lua/index.json",
+      "assets/screenshots/master-import-runtime.png"
+    ],
+    "store": {
+      "category": "tool",
+      "icon": "",
+      "banner": "",
+      "screenshots": ["assets/screenshots/master-import-runtime.png"]
+    }
+  }
+}
