@@ -1,6 +1,6 @@
 {
   "name": "shiki-luascript-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "在 SealDice 1.6.0 中加载受控的 Dice! Lua 插件。",
   "author": "BegoniaHe",

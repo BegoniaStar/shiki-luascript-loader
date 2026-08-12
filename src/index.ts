@@ -34,7 +34,7 @@ interface OwnedState {
 }
 
 const existing = seal.ext.find(extensionName);
-const extension = existing ?? seal.ext.new(extensionName, 'BegoniaStar', '0.1.0');
+const extension = existing ?? seal.ext.new(extensionName, 'BegoniaStar', '0.1.1');
 
 // The declared API returns null, while the managed Goja bridge exposes a
 // missing extension as undefined. Treat both as an unregistered extension.

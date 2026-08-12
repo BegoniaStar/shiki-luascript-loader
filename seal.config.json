@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "package": {
     "name": "Shiki LuaScript Loader",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "authors": ["BegoniaHe","星·麒"],
     "license": "AGPL-3.0-only",
     "description": "在 SealDice 1.6.0 中加载受控的 Dice! Lua 插件。",

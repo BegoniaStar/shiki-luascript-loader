@@ -233,6 +233,6 @@ mise exec -- sealwrapper package
 mise exec -- npm run build
 ```
 
-构建结果位于 `release/shiki-luascript-loader@0.1.0.sealpack`，同时会生成
+构建结果位于 `release/shiki-luascript-loader@0.1.1.sealpack`，同时会生成
 `.sha256` 和 release provenance 文件。将 `.sealpack` 导入 SealDice 1.6.0 的扩展/插件
 管理器，启用扩展并重载 JS 扩展即可；实际菜单名称由 SealDice 版本决定。
