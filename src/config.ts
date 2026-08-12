@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: AGPL-3.0-only
  */
 
-export const extensionName = 'sealdice-dice-lua-compat';
+export const extensionName = 'shiki-luascript-loader';
 
 const configGroup = 'Dice Lua Compatibility';
 

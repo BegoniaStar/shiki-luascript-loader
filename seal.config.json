@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
   "package": {
-    "name": "SealDice Dice Lua Compatibility",
+    "name": "Shiki LuaScript Loader",
     "version": "0.1.0",
     "authors": ["BegoniaHe","星·麒"],
     "license": "AGPL-3.0-only",
     "description": "在 SealDice 1.6.0 中加载受控的 Dice! Lua 插件。",
-    "homepage": ""
+    "homepage": "https://github.com/BegoniaHe/shiki-luascript-loader"
   },
   "build": {
     "entry": "src/index.ts",
     "ecmaTarget": "es6",
-    "bundleFileName": "dice-lua-compat.js"
+    "bundleFileName": "shiki-luascript-loader.js"
   },
   "sealDice": {
     "buildTarget": ["1.6.0"],
@@ -26,12 +26,12 @@
     }
   },
   "sealpack": {
-    "packageId": "BegoniaStar/sealdice-dice-lua-compat",
+    "packageId": "BegoniaHe/shiki-luascript-loader",
     "minSealDice": "1.6.0",
     "contents": {
       "scripts": {
         "bundle": true,
-        "path": "scripts/dice-lua-compat.js"
+        "path": "scripts/shiki-luascript-loader.js"
       }
     },
     "dependencies": {},

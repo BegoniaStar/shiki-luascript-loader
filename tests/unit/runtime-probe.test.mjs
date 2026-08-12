@@ -9,7 +9,7 @@ import { join } from 'node:path';
 import test from 'node:test';
 
 test('Lua handlers survive registration-to-invocation VM transfer', async () => {
-  const directory = await mkdtemp(join(tmpdir(), 'dice-lua-compat-'));
+  const directory = await mkdtemp(join(tmpdir(), 'shiki-luascript-loader-'));
   const output = join(directory, 'runtime.cjs');
   try {
     buildSync({
