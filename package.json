@@ -5,7 +5,7 @@
   "description": "在 SealDice 1.6.0 中加载受控的 Dice! Lua 插件。",
   "author": "BegoniaHe",
   "contributors": ["星·麒"],
-  "homepage": "https://github.com/BegoniaHe/shiki-luascript-loader",
+  "homepage": "https://github.com/BegoniaStar/shiki-luascript-loader",
   "license": "AGPL-3.0-only",
   "type": "module",
   "engines": {

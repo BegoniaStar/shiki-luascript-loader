@@ -6,7 +6,7 @@
     "authors": ["BegoniaHe","星·麒"],
     "license": "AGPL-3.0-only",
     "description": "在 SealDice 1.6.0 中加载受控的 Dice! Lua 插件。",
-    "homepage": "https://github.com/BegoniaHe/shiki-luascript-loader"
+    "homepage": "https://github.com/BegoniaStar/shiki-luascript-loader"
   },
   "build": {
     "entry": "src/index.ts",
@@ -48,6 +48,7 @@
     "readme": "README.md",
     "assets": [
       "assets/dice-lua/index.json",
+      "assets/LICENSE",
       "assets/screenshots/master-import-runtime.png"
     ],
     "store": {
